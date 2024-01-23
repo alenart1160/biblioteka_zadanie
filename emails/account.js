@@ -13,6 +13,17 @@ const sendWelcomeEmail = (email, name) => {
 		text: `Welcome to the app, ${name}.`,
 	})
 }
+
+const sendCancelationEmail = (email, name) => {
+	sgMail.send({
+		to: email,
+		from: authEmail,
+		subject: 'Goodbye!',
+		text: `We are sorry that you are leaving us ${name}`,
+	})
+}
+
 module.export = {
 	sendWelcomeEmail,
+	sendCancelationEmail,
 }
