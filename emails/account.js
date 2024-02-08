@@ -5,7 +5,7 @@ const authMail = process.env.EMAIL_FROM
 const sendWelcomeEmail = (email, name) => {
 	sgMail.send({
 		to: email,
-		from: { email: authMail, name: 'Arek Lenart' },
+		from: { email: 'a.lenart2001@gmail.com', name: 'Arek Lenart' },
 		name: 'Andrew',
 		subject: 'Thanks for joining in!',
 		text: `Welcome to the app, ${name}. Let me know how you get along with the app.`,
@@ -15,10 +15,10 @@ const sendWelcomeEmail = (email, name) => {
 const sendCancelationEmail = (email, name) => {
 	sgMail.send({
 		to: email,
-		from: { email: authMail, name: 'Arek Lenart' },
+		from: { email: 'a.lenart2001@gmail.com', name: 'Arek Lenart' },
 		name: 'Andrew',
-		subject: 'Sorry to see you go!',
-		text: `Goodbye, ${name}. I hope to see you back sometime soon.`,
+		subject: 'Thanks for joining in!',
+		text: `Welcome to the app, ${name}. Let me know how you get along with the app.`,
 	})
 }
 
